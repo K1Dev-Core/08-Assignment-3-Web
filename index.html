@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตะกร้าสั่งอาหาร</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 p-8">
+    <h1 class="text-3xl font-bold mb-6 text-center">ตะกร้าสั่งอาหาร</h1>
+
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">รายการอาหารทั้งหมด</h2>
+            <div class="space-y-4" id="foodList"></div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">ตะกร้าสินค้า</h2>
+            <div id="cartItems" class="space-y-4 mb-6">
+                <p class="text-gray-500 text-center py-8">ตะกร้าว่างเปล่า</p>
+            </div>
+
+            <div class="border-t pt-4 space-y-2 mb-4">
+                <div class="flex justify-between">
+                    <span>จำนวนรายการ:</span>
+                    <span id="itemCount">0</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>จำนวนสินค้า:</span>
+                    <span id="productCount">0</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>ยอดรวมย่อย:</span>
+                    <span id="subtotal">0 บาท</span>
+                </div>
+                <div class="flex justify-between font-bold text-lg">
+                    <span>รวมทั้งหมด:</span>
+                    <span id="total">0 บาท</span>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <button class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+                    onclick="checkout()">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+                    ชำระเงิน
+                </button>
+                <button
+                    class="w-full bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 flex items-center justify-center gap-2"
+                    onclick="clearCart()">
+                    <i class="fa-solid fa-trash"></i>
+                    <span>ล้างตะกร้า</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
